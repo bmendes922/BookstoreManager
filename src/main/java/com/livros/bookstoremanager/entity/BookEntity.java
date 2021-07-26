@@ -33,5 +33,5 @@ public class BookEntity {
     @ManyToOne(fetch= FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     //para dizer qual coluna do nosso banco de dados que vai fazer nosso relacionamento como chave estrangeira
     @JoinColumn(name="author_id")
-    private AuthorEntity authorEntity;
+    private AuthorEntity AuthorEntity;
 }
