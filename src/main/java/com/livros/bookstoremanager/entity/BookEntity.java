@@ -11,7 +11,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Book {
+public class BookEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,5 +33,5 @@ public class Book {
     @ManyToOne(fetch= FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     //para dizer qual coluna do nosso banco de dados que vai fazer nosso relacionamento como chave estrangeira
     @JoinColumn(name="author_id")
-    private Author author;
+    private AuthorEntity authorEntity;
 }
